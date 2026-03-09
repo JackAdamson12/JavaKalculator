@@ -26,11 +26,21 @@ public class CalculatorTest {
 	}
 	  @Test
     public void testDel()
-	 {
+	{
         Calculator sut = new Calculator();
         sut.setState(10);
         sut.dele(2);
 
         assertEquals(5, sut.getState());
     }
+
+	@Test
+	public void testClear()
+	{
+		Calculator sut = new Calculator();
+		sut.setState(10);
+		sut.clear(0);
+
+		assertEquals(0, sut.getState());
+	}
 }
