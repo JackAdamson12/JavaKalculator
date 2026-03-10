@@ -24,6 +24,16 @@ public class CalculatorTest {
 
 		assertEquals("1*2 = 2", 2, sut.getState());
 	}
+	@Test
+	public void testMultiplyByZero()
+	{
+		Calculator sut = new Calculator();
+		sut.setState(10);
+
+		sut.mult(0);
+
+		assertEquals(0, sut.getState());
+	}
 	  @Test
     public void testDel()
 	{
@@ -33,14 +43,54 @@ public class CalculatorTest {
 
         assertEquals(5, sut.getState());
     }
+	@Test
+	public void testDeleZero()
+	{	
+    	Calculator sut = new Calculator();
+    	sut.setState(10);
+
+    	sut.dele(0);
+
+    	assertEquals(10, sut.getState());
+	}
+	@Test
+	public void testAddMaxValue()
+	{
+		Calculator sut = new Calculator();
+		sut.setState(Integer.MAX_VALUE);
+
+		sut.add(1);
+
+		assertEquals(0, sut.getState());
+	}
+	@Test
+	public void testMinusMinValue()
+	{
+		Calculator sut = new Calculator();
+		sut.setState(Integer.MIN_VALUE);
+
+		sut.minus(1);
+
+		assertEquals(0, sut.getState());
+	}
 
 	@Test
 	public void testClear()
 	{
-		Calculator sut = new Calculator();
-		sut.setState(10);
-		sut.clear(0);
+ 		Calculator sut = new Calculator();
+    	sut.setState(10);
 
-		assertEquals(0, sut.getState());
+    	sut.clear();
+
+    	assertEquals(0, sut.getState());
+	}
+	@Test
+	public void testMemorySave()
+	{
+		Memory mem = new Memory();
+
+		mem.setMemory(10);
+
+		assertEquals(10, mem.getMemory());
 	}
 }

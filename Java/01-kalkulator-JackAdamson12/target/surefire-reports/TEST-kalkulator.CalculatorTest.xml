@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="kalkulator.CalculatorTest" time="0.051" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="kalkulator.CalculatorTest" time="0.058" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,9 +15,9 @@
     <property name="user.country" value="RU"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin"/>
-    <property name="sun.java.command" value="C:\Users\djeka\AppData\Local\Temp\surefire8685464621293173628\surefirebooter-20260309224826628_3.jar C:\Users\djeka\AppData\Local\Temp\surefire8685464621293173628 2026-03-09T22-48-26_485-jvmRun1 surefire-20260309224826628_1tmp surefire_0-20260309224826628_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\djeka\AppData\Local\Temp\surefire11847660585845766355\surefirebooter-20260310224831273_3.jar C:\Users\djeka\AppData\Local\Temp\surefire11847660585845766355 2026-03-10T22-48-31_085-jvmRun1 surefire-20260310224831273_1tmp surefire_0-20260310224831273_2tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="test" value="kalkulator.CalculatorTest#testClear"/>
+    <property name="test" value="kalkulator.CalculatorTest"/>
     <property name="surefire.test.class.path" value="E:\Java\JavaKalculator\Java\01-kalkulator-JackAdamson12\target\test-classes;E:\Java\JavaKalculator\Java\01-kalkulator-JackAdamson12\target\classes;C:\Users\djeka\.m2\repository\junit\junit\4.13\junit-4.13.jar;C:\Users\djeka\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\djeka"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\djeka\AppData\Local\Temp\surefire8685464621293173628\surefirebooter-20260309224826628_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\djeka\AppData\Local\Temp\surefire11847660585845766355\surefirebooter-20260310224831273_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.18+8"/>
@@ -60,5 +60,21 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testClear" classname="kalkulator.CalculatorTest" time="0.002"/>
+  <testcase name="testDel" classname="kalkulator.CalculatorTest" time="0.002"/>
+  <testcase name="testAddMaxValue" classname="kalkulator.CalculatorTest" time="0.003">
+    <system-out><![CDATA[Przekroczono zakres!
+]]></system-out>
+  </testcase>
+  <testcase name="testClear" classname="kalkulator.CalculatorTest" time="0.0"/>
+  <testcase name="testMultiplyByZero" classname="kalkulator.CalculatorTest" time="0.0"/>
+  <testcase name="testMinusMinValue" classname="kalkulator.CalculatorTest" time="0.001">
+    <system-out><![CDATA[Przekroczono zakres!
+]]></system-out>
+  </testcase>
+  <testcase name="testAddOne" classname="kalkulator.CalculatorTest" time="0.0"/>
+  <testcase name="testMultOneByTwo" classname="kalkulator.CalculatorTest" time="0.0"/>
+  <testcase name="testDeleZero" classname="kalkulator.CalculatorTest" time="0.002">
+    <system-out><![CDATA[Nie moЕјna dzieliД‡ przez zero!
+]]></system-out>
+  </testcase>
 </testsuite>

@@ -15,4 +15,9 @@ public void setMemory(int memory)
 {
     this.memory = memory;
 }
+
+public void clearMemory()
+{
+    memory = 0;
+}
 }

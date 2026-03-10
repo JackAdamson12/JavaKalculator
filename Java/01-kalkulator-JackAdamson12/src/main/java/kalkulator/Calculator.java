@@ -11,38 +11,36 @@ public class Calculator {
 		this.state = state;
 	}
 
-	public int add(int value) 
+	public void add(int value) 
 	{
     long temp = (long) state + value;
-    return MinMax(temp);
+    state = MinMax(temp);
     }
 
-	public int mult(int value) 
+	public void mult(int value) 
 	{
     long temp = (long) state * value;
-    return MinMax(temp);
+    state = MinMax(temp);
     }
 	
-	public int minus(int value) 
+	public void minus(int value) 
 	{
     long temp = (long) state - value;
-    return MinMax(temp);
+    state = MinMax(temp);
     }
 
-    public int dele(int value)
+    public void dele(int value)
 	{ 
 		if(value == 0)
 		{
 			System.out.println("Nie można dzielić przez zero!");
-			state = 0;
-			return state;
+			return;
 		}
 		state /= value;
-		return state;
 	}
-	public void clear(int value)
+	public void clear()
 	{
-		
+		state = 0;
 	}
 
 	private int MinMax(long temp)
